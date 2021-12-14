@@ -1,0 +1,30 @@
+.main {
+    width: 77%;
+    position: absolute;
+    margin: auto;
+}
+
+.main .t1 {
+    font-size: 1.5rem;
+}
+
+.main .t2 {
+    font-size: 1.5rem;
+}
+
+.side {
+    width: 6rem;
+    height: 40rem;
+}
+
+.side a {
+    line-height: 7.5rem;
+}
+
+#Outer {
+    height: 100vh;
+}
+
+.toTop {
+    width: 15rem;
+}

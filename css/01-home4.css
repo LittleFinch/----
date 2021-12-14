@@ -1,0 +1,141 @@
+html {
+    /* border: 1px solid #fff; */
+    font-size: 10px;
+}
+
+#copy {
+    /* border: 1px solid #fff; */
+    text-align: right;
+    font-size: 1.6rem;
+}
+
+#main {
+    /* border: 1px solid red; */
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 3rem;
+}
+
+.navigation .introduce {
+    font-size: 1.6rem;
+}
+
+.navigation a {
+    color: red;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    text-decoration: none;
+    /* border: 1px solid #000; */
+}
+
+#right {
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: right;
+}
+
+.begin {
+    border: 1px solid #e95858;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.begin a {
+    color: red;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+#Outer {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    /* border: 1px solid #fff; */
+}
+
+.Border {
+    flex: 0 0 50%;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    /* border: 5px solid #fff; */
+    margin-top: 5vh;
+}
+
+.title {
+    color: #e95858;
+    font-weight: bold;
+    letter-spacing: 12px;
+    /* border: 1px solid #000; */
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+.Border:hover,
+.title,
+.subtitle {
+    /* 设置逐帧动画 */
+    animation: move 1.5s steps(3);
+}
+
+@keyframes move {
+    0% {
+        clip-path: inset(80% 0px 0px 0px);
+        transform: translate(-20px, -10px)
+    }
+    10% {
+        clip-path: inset(10% 0px 85% 0px);
+        transform: translate(-10px, -10px)
+    }
+    20% {
+        clip-path: inset(80% 0px 0px 0px);
+        transform: translate(-10px, -10px)
+    }
+    30% {
+        clip-path: inset(10% 0px 85% 0px);
+        transform: translate(-20px, -20px)
+    }
+    40% {
+        clip-path: inset(10% 0px 85px 0px);
+        transform: translate(0px, 5px)
+    }
+    50% {
+        clip-path: inset(10% 0px 30% 0px);
+        transform: translate(-5px, 0px)
+    }
+    60% {
+        clip-path: inset(40% 0px 30% 0px);
+        transform: translate(5px, 10px)
+    }
+    70% {
+        clip-path: inset(50% 0px 30% 0px);
+        transform: translate(-10px, -10px)
+    }
+    80% {
+        clip-path: inset(80% 0px 5% 0px);
+        transform: translate(20px, -10px)
+    }
+    90% {
+        clip-path: inset(80% 0px 0px 0px);
+        transform: translate(-10px, 0px)
+    }
+    100% {
+        clip-path: inset(80% 0px 0px 0px);
+        transform: translate(0px, 0px)
+    }
+}

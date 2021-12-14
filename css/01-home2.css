@@ -1,0 +1,48 @@
+body {
+    background-color: pink;
+    background-size: cover;
+}
+
+#copy {
+    color: #f51111;
+}
+
+.title {
+    font-size: 12rem;
+}
+
+.subtitle {
+    color: #fff;
+    text-shadow: 5px 5px 0px #e95858;
+    font-size: 5.5rem;
+    letter-spacing: 10px;
+}
+
+#main {
+    margin-top: 10vh;
+}
+
+.navigation {
+    width: 30vh;
+    height: 40vh;
+    border: 1px solid #fff;
+}
+
+.navigation a {
+    color: #fff;
+}
+
+#right {
+    width: 40vh;
+    height: 40vh;
+}
+
+.begin {
+    width: 95%;
+    height: 15vh;
+    border: 1px solid #fff;
+}
+
+.begin a {
+    color: #fff;
+}

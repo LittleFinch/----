@@ -1,0 +1,154 @@
+html {
+    font-size: 10px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-position: center 0;
+    background-attachment: fixed;
+    background-image: url(../images/background/mine.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 20rem;
+    line-height: 1;
+}
+
+#outer {
+    display: grid;
+    /* 网格缝隙 */
+    grid-gap: 2rem;
+    /* 设置格子的列数(自适应)和宽度 */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    /* 设置格子的高度 */
+    grid-auto-rows: 20rem;
+    /* 当插入图片时为填充方式 */
+    grid-auto-flow: dense;
+}
+
+#outer div {
+    background-color: #e75e5e83;
+}
+
+#outer div:hover {
+    background-color: #ffffff62;
+    /* 水平 垂直 模糊距离 */
+    box-shadow: 0rem 2rem 2rem #4947489c;
+    /* 放大 */
+    padding: 1rem;
+    transform: scale(1.05);
+    /* cubic-bezier贝塞尔曲线以一条直线放在范围只有 1 的坐标轴中，
+    并从中间拿出两个点来拉扯（X 轴的取值区间是 [0, 1]，
+    Y 轴任意），最后形成的曲线就是动画的速度曲线。
+    .55就是0.55,.1就是0.1 */
+    transition: all 1s cubic-bezier(.55, 0, .1, 1);
+}
+
+#outer span {
+    color: #6495ed;
+    font-size: 3rem;
+    font-family: 'Kristen ITC';
+}
+
+#outer .wide {
+    grid-column: span 2;
+}
+
+#outer .tall {
+    grid-row: span 2;
+}
+
+#outer .big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#outer .join {
+    grid-row: span 2;
+    grid-column: span 5;
+}
+
+#outer .join .inside {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+    text-align: center;
+    top: 3rem;
+    left: 3rem;
+    background-color: transparent;
+    box-shadow: 0 0px 0px;
+    transform: scale(1);
+    padding: 0px;
+}
+
+.inside h1 {
+    font-size: 4.4rem;
+    color: #ffffffef;
+}
+
+.inside p {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.join:hover .inside p {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+#outer .join .ball {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    content: "";
+    border: 3px solid #fff;
+    border-radius: 28% 62% 63% 37%/ 41% 44% 56% 59%;
+    transition: 0.4s;
+    animation: ball 8s infinite linear;
+    background-color: transparent;
+    /*背景透明*/
+    box-shadow: 0 0px 0px;
+    /*去除阴影*/
+    transform: scale(1);
+    /* 放大去除 */
+    padding: 0px;
+}
+
+.ball::before {
+    width: 25rem;
+    height: 24rem;
+    /* display: block; */
+    position: absolute;
+    /* 固定块大小，否则会分开 */
+    border: 3px solid #fff;
+    /* 内容为空 */
+    content: "";
+    background-color: transparent;
+    border-radius: 38% 62% 63% 37%/ 41% 44% 56% 59%;
+    transition: 0.4s;
+    animation: ball 4s infinite linear;
+}
+
+.ball::after {
+    width: 25rem;
+    height: 24rem;
+    display: block;
+    position: absolute;
+    /* 固定块大小，否则会分开 */
+    border: 3px solid #fff;
+    /* 内容为空 */
+    content: "";
+    background-color: transparent;
+    border-radius: 38% 62% 63% 37%/ 41% 44% 56% 59%;
+    animation: ball 6s infinite linear;
+}
+
+@keyframes ball {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

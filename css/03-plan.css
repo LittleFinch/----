@@ -5,10 +5,12 @@ html {
 }
 
 body {
-    background-image: url(../imges/background/11.jpg);
+    background-image: url(../images/background/plan.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center 0;
+    min-height: 100vh;
 }
 
 #Outer {
@@ -33,7 +35,7 @@ body {
 }
 
 .head {
-    background-image: url(../imges/head/03.png);
+    background-image: url(../images/head/head.png);
     border: #e65757 8px solid;
     background-size: cover;
     border-radius: 50%;
@@ -136,7 +138,7 @@ td:hover {
 }
 
 .toTop {
-    width: 20rem;
+    width: 15rem;
     position: fixed;
     right: 0;
     bottom: 0

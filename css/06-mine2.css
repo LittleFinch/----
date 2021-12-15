@@ -1,0 +1,52 @@
+body {
+    background-color: pink;
+    padding: 2rem 10rem;
+}
+
+#outer .wide {
+    grid-column: span 2;
+}
+
+#outer .tall {
+    grid-row: span 2;
+}
+
+#outer .big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#outer .join {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+#outer .join .inside {
+    width: 16rem;
+    height: 10rem;
+}
+
+.inside h1 {
+    font-size: 3.8rem;
+    color: #ffffffef;
+}
+
+.inside p {
+    font-size: 2rem;
+    color: #fff;
+}
+
+#outer .join .ball {
+    width: 23rem;
+    height: 23rem;
+}
+
+.ball::before {
+    width: 23rem;
+    height: 22rem;
+}
+
+.ball::after {
+    width: 23rem;
+    height: 22rem;
+}

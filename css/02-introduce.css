@@ -52,13 +52,14 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40rem;
+    transition: all 0.5s;
+    width: 5rem;
 }
 
 .navbar input {
     width: 4rem;
     height: 4rem;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .navbar span {
@@ -68,14 +69,15 @@ img {
     position: absolute;
     left: 2rem;
     top: calc(50% - 2rem);
+    transition: all 0.5s;
     pointer-events: none;
 }
 
-.navbar span:nth-child(1) {
+.navbar span:nth-child(2) {
     top: calc(50% - 0.5rem);
 }
 
-.navbar span:nth-child(2) {
+.navbar span:nth-child(3) {
     top: calc(50% + 1rem);
 }
 
@@ -107,8 +109,21 @@ img {
     /* 这句都起作用了 */
 }
 
-.navbar input:checked~span:nth-child(1) {
+.navbar:focus-within {
+    width: 40rem;
+}
+
+.navbar input:checked~span:nth-child(2) {
     top: calc(50% - 2px);
     transform: rotate(-45deg);
     background-color: #333;
+}
+
+.navbar input:checked~span:nth-child(3) {
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
+    background-color: #333;
+}
+.navbar input:checked~span:nth-child(4) {
+    display: none;
 }

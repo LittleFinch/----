@@ -8,7 +8,6 @@
     padding: 2rem;
     border-radius: 5rem;
     background: #e75f5fc4;
-    transition: all 0.8s;
     flex-direction: column;
     /*这里的 宽度由 active/deactive 接管*/
 }
@@ -82,19 +81,61 @@
 }
 
 
-/*  路由显示时宽度  */
+/*  路由激活/去激活时高度  */
 
-.deactive {
-    width: 4rem;
-    height: 4rem;
-}
+
+/** 极速版本*/
 
 .active {
     height: 40rem;
     width: 4rem;
+    transition: all 0.3s;
 }
 
-.navbar input:checked~ul {
+.navbar.active ul {
+    transition: all 0.5s 0.2s;
+}
+
+.deactive {
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.4s 0.3s;
+}
+
+.navbar.deactive ul {
+    transition: all 0.5s;
+}
+
+.navbar.active ul {
+    opacity: 1;
+    width: 100%;
+    height: 32rem;
+}
+
+
+/** 缓速版本
+.active {
+    height: 40rem;
+    width: 4rem;
+    transition: all 0.6s;
+}
+
+.navbar.active ul {
+    transition: all 0.8s 0.4s;
+}
+
+.deactive {
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.6s 0.4s;
+}
+
+.navbar.deactive ul {
+    transition: all 0.4s;
+}
+*/
+
+.navbar.active ul {
     opacity: 1;
     width: 100%;
     height: 32rem;
@@ -103,7 +144,7 @@
 
 /* 最上的条*/
 
-.navbar input:checked~span:nth-child(2) {
+.navbar.active span:nth-child(2) {
     bottom: 3.8rem;
     transform: rotate(-45deg);
     background-color: #df3535;
@@ -113,7 +154,7 @@
 
 /* 最下的条*/
 
-.navbar input:checked~span:nth-child(3) {
+.navbar.active span:nth-child(3) {
     bottom: 3.8rem;
     transform: rotate(45deg);
     background-color: #df3535;
@@ -123,7 +164,7 @@
 
 /* 中间的条*/
 
-.navbar input:checked~span:nth-child(4) {
+.navbar.active span:nth-child(4) {
     /* bottom: calc(10% - 2px); */
     opacity: 0;
     transition: all 0.9s;

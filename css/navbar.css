@@ -8,13 +8,13 @@
     padding: 2rem;
     border-radius: 5rem;
     background: #e75f5fc4;
-    transition: all 0.8s;
     flex-direction: column;
     /*这里的 宽度由 active/deactive 接管*/
 }
 
 .navbar ul {
     display: flex;
+    padding: 0;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -35,25 +35,25 @@
     position: absolute;
     background-color: #fff;
     pointer-events: none;
-    transition: all 0.5s;
     opacity: 1;
-    top: calc(50% - 12px);
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    bottom: 38px;
+    transition: transform 0.3s ease-in-out, 
+        bottom 0.3s ease-in-out 0.3s;
 }
 
 .navbar span:nth-child(3) {
-    top: calc(50% + 8px);
+    bottom: 48px;
 }
 
 
 /* 中间那条线 */
 
-.navbar span:nth-child(4) {
-    top: calc(50% - 2px);
+.navbar span:nth-child(2) {
+    bottom: 28px;
 }
 
 .navbar ul {
-    width: 0;
+    height: 0;
     overflow: hidden;
     white-space: nowrap;
     /* 溢出隐藏 */
@@ -64,7 +64,7 @@
 
 .navbar ul li {
     list-style: none;
-    margin: 1 0rem;
+    margin: 0 1rem;
     flex-wrap: nowrap;
     /* a标签的左右边距 */
 }
@@ -81,16 +81,26 @@
 }
 
 
-/*  路由显示时宽度  */
+/*  路由激活/去激活时高度  */
+
+/** 极速版本*/
+.active {
+    height: 40rem;
+    width: 4rem;
+    transition: all 0.3s;
+}
+.navbar.active ul {
+    transition: all 0.5s 0.2s;
+}
 
 .deactive {
     width: 4rem;
     height: 4rem;
+    transition: all 0.4s 0.3s;
 }
 
-.active {
-    height: 40rem;
-    width: 4rem;
+.navbar.deactive ul {
+    transition: all 0.5s;
 }
 
 .navbar input:checked~ul {
@@ -100,28 +110,60 @@
 }
 
 
+/** 缓速版本
+.active {
+    height: 40rem;
+    width: 4rem;
+    transition: all 0.6s;
+}
+
+.navbar.active ul {
+    transition: all 0.8s 0.4s;
+}
+
+.deactive {
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.6s 0.4s;
+}
+
+.navbar.deactive ul {
+    transition: all 0.4s;
+}
+*/
+.navbar input:checked~ul {
+    opacity: 1;
+    width: 100%;
+    height: 32rem;
+}
+
+
 /* 最上的条*/
 
-.navbar input:checked~span:nth-child(4) {
-    top: calc(90% - 2px);
+.navbar input:checked~span:nth-child(2) {
+    bottom: 38px;
     transform: rotate(-45deg);
     background-color: #df3535;
-    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    transition: bottom 0.3s ease-in-out,
+        transform 0.3s ease-in-out 0.3s;
 }
 
 
 /* 最下的条*/
 
-.navbar input:checked~span:nth-child(2) {
-    top: calc(90% - 2px);
+.navbar input:checked~span:nth-child(3) {
+    bottom: 38px;
     transform: rotate(45deg);
     background-color: #df3535;
-    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    transition: bottom 0.3s ease-in-out, 
+        transform 0.3s ease-in-out 0.3s;
 }
 
 
 /* 中间的条*/
 
-.navbar input:checked~span:nth-child(3) {
+.navbar input:checked~span:nth-child(4) {
+    /* bottom: calc(10% - 2px); */
     opacity: 0;
+    transition: all 0.9s;
 }

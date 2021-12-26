@@ -5,9 +5,6 @@
 
 html {
     font-size: 10px;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
 }
 
 .outer {
@@ -36,94 +33,4 @@ html {
 img {
     width: 10rem;
     height: 50rem;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar {
-    position: relative;
-    padding: 2rem;
-    border-radius: 5rem;
-    background: #e75f5fc4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
-    width: 5rem;
-}
-
-.navbar input {
-    width: 4rem;
-    height: 4rem;
-    opacity: 0;
-}
-
-.navbar span {
-    width: 4rem;
-    height: 0.5rem;
-    background-color: #fff;
-    position: absolute;
-    left: 2rem;
-    top: calc(50% - 2rem);
-    transition: all 0.5s;
-    pointer-events: none;
-}
-
-.navbar span:nth-child(2) {
-    top: calc(50% - 0.5rem);
-}
-
-.navbar span:nth-child(3) {
-    top: calc(50% + 1rem);
-}
-
-.navbar ul {
-    width: 0;
-    overflow: hidden;
-    /* 溢出隐藏 */
-}
-
-.navbar ul li {
-    list-style: none;
-    margin: 0 1rem;
-    /* a标签的左右边距 */
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.navbar ul li a:hover {
-    color: #333;
-}
-
-.navbar input:checked~ul {
-    width: 100%;
-    /* 这句都起作用了 */
-}
-
-.navbar:focus-within {
-    width: 40rem;
-}
-
-.navbar input:checked~span:nth-child(2) {
-    top: calc(50% - 2px);
-    transform: rotate(-45deg);
-    background-color: #333;
-}
-
-.navbar input:checked~span:nth-child(3) {
-    top: calc(50% - 2px);
-    transform: rotate(45deg);
-    background-color: #333;
-}
-.navbar input:checked~span:nth-child(4) {
-    display: none;
 }

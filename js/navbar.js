@@ -1,4 +1,5 @@
 window.onload = function() {
+    document.getElementById('navBarFlat').checked = false;
     document.getElementById('navBarFlat').addEventListener('change', function(e) {
         let v = this.checked;
         let navbar = document.querySelector('.navbar');

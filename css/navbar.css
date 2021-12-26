@@ -1,0 +1,127 @@
+.navbar {
+    float: left;
+    margin: 1rem;
+    /* 底部定位 */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    border-radius: 5rem;
+    background: #e75f5fc4;
+    transition: all 0.8s;
+    flex-direction: column;
+    /*这里的 宽度由 active/deactive 接管*/
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar input {
+    width: 4rem;
+    height: 4rem;
+    opacity: 0;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.navbar span {
+    left: 2.5rem;
+    width: 3rem;
+    height: 0.4rem;
+    position: absolute;
+    background-color: #fff;
+    pointer-events: none;
+    transition: all 0.5s;
+    opacity: 1;
+    top: calc(50% - 12px);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+}
+
+.navbar span:nth-child(3) {
+    top: calc(50% + 8px);
+}
+
+
+/* 中间那条线 */
+
+.navbar span:nth-child(4) {
+    top: calc(50% - 2px);
+}
+
+.navbar ul {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    /* 溢出隐藏 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 1 0rem;
+    flex-wrap: nowrap;
+    /* a标签的左右边距 */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+
+/*  路由显示时宽度  */
+
+.deactive {
+    width: 4rem;
+    height: 4rem;
+}
+
+.active {
+    height: 40rem;
+    width: 4rem;
+}
+
+.navbar input:checked~ul {
+    opacity: 1;
+    width: 100%;
+    height: 32rem;
+}
+
+
+/* 最上的条*/
+
+.navbar input:checked~span:nth-child(4) {
+    top: calc(90% - 2px);
+    transform: rotate(-45deg);
+    background-color: #df3535;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+
+
+/* 最下的条*/
+
+.navbar input:checked~span:nth-child(2) {
+    top: calc(90% - 2px);
+    transform: rotate(45deg);
+    background-color: #df3535;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+
+
+/* 中间的条*/
+
+.navbar input:checked~span:nth-child(3) {
+    opacity: 0;
+}

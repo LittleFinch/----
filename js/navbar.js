@@ -1,6 +1,6 @@
-window.onload = function() {
-    document.getElementById('navBarFlat').addEventListener('change', function(e) {
-        let v = this.checked;
+window.onload = function () {
+    function checknavBarFlat() {
+        let v = document.getElementById('navBarFlat').checked;
         let navbar = document.querySelector('.navbar');
         if (v) { // 激活
             navbar.classList.remove('deactive');
@@ -9,6 +9,8 @@ window.onload = function() {
             navbar.classList.remove('active');
             navbar.classList.add('deactive');
         }
-    });
+    }
+    checknavBarFlat()
+    document.getElementById('navBarFlat').addEventListener('change', checknavBarFlat);
 
 }

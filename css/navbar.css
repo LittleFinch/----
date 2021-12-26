@@ -103,7 +103,7 @@
     transition: all 0.5s;
 }
 
-.navbar input:checked~ul {
+.navbar.active ul {
     opacity: 1;
     width: 100%;
     height: 32rem;
@@ -131,7 +131,7 @@
     transition: all 0.4s;
 }
 */
-.navbar input:checked~ul {
+.navbar.active ul {
     opacity: 1;
     width: 100%;
     height: 32rem;
@@ -140,7 +140,7 @@
 
 /* 最上的条*/
 
-.navbar input:checked~span:nth-child(2) {
+.navbar.active span:nth-child(2) {
     bottom: 38px;
     transform: rotate(-45deg);
     background-color: #df3535;
@@ -151,7 +151,7 @@
 
 /* 最下的条*/
 
-.navbar input:checked~span:nth-child(3) {
+.navbar.active span:nth-child(3) {
     bottom: 38px;
     transform: rotate(45deg);
     background-color: #df3535;
@@ -162,7 +162,7 @@
 
 /* 中间的条*/
 
-.navbar input:checked~span:nth-child(4) {
+.navbar.active span:nth-child(4) {
     /* bottom: calc(10% - 2px); */
     opacity: 0;
     transition: all 0.9s;

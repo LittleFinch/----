@@ -84,8 +84,7 @@
 /*  路由激活/去激活时高度  */
 
 
-/** 极速版本*/
-
+/* 极速版本
 .active {
     height: 40rem;
     width: 4rem;
@@ -110,10 +109,11 @@
     opacity: 1;
     width: 100%;
     height: 32rem;
-}
+} */
 
 
-/** 缓速版本
+/* * 缓速版本 */
+
 .active {
     height: 40rem;
     width: 4rem;
@@ -133,7 +133,6 @@
 .navbar.deactive ul {
     transition: all 0.4s;
 }
-*/
 
 .navbar.active ul {
     opacity: 1;

@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70rem;
+    height: 60rem;
+}
+
+.container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 10rem;
+    height: 14rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.container .box .img {
+    /* 图片盒子 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 2rem;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2), -18px -18px 30px rgba(255, 255, 255, 1);
+    transition: all 0.2s ease-out;
+}
+
+.container .box .img img {
+    /* 图标大小 */
+    width: 6rem;
+    transition: all 0.2s ease-out;
+}
+
+#contacts {
+    width: 7rem;
+}
+
+#phone {
+    width: 5rem;
+}
+
+.container .box p {
+    color: #707c90;
+    font-size: 1.6rem;
+}
+
+.container .box .img:hover {
+    /* inset 是内部阴影 默认是外部阴影outset */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 18px 18px 30px rgba(0, 0, 0, 0.1), inset -18px -18px 30px rgba(255, 255, 255, 1);
+}
+
+.container .box .img:hover img {
+    width: 5.8rem;
+}

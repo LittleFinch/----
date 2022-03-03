@@ -7,7 +7,7 @@ html {
     font-size: 10px;
 }
 
-.outer {
+#outer {
     width: 80rem;
     height: 50rem;
     margin-top: 10rem;
@@ -17,12 +17,12 @@ html {
     overflow: hidden;
 }
 
-#img {
+.img {
     transition: .7s;
     overflow: hidden;
 }
 
-#img:hover {
+.img:hover {
     /* 不扩大缩小，正常宽度 */
     flex-grow: 0;
     flex-shrink: 0;

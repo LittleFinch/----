@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function() {
     function checknavBarFlat() {
         let v = document.getElementById('navBarFlat').checked;
         let navbar = document.querySelector('.navbar');
@@ -13,4 +13,4 @@ window.onload = function() {
     checknavBarFlat()
     document.getElementById('navBarFlat').addEventListener('change', checknavBarFlat);
 
-}
+})

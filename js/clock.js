@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function() {
     var Flipper = /** @class */ (function() {
         function Flipper(node, currentTime, nextTime) {
             this.isFlipping = false;
@@ -40,7 +40,7 @@ window.onload = function() {
             .split(":")
             .join("");
     };
-
+    // document.querySelectorAll 
     var flips = document.querySelectorAll(".flip");
     var now = new Date();
     var nowTimeStr = getTimeFromDate(new Date(now.getTime() - 1000));
@@ -57,4 +57,4 @@ window.onload = function() {
             flippers[i].flipDown(nowTimeStr[i], nextTimeStr[i]);
         }
     }, 1000);
-}
+})

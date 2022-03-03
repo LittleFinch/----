@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="css/02-introduce.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/clock.css">
+    <!-- 这里先赋值了onload -->
     <script src="js/navbar.js"></script>
+    <!-- onload被覆盖 -->
     <script src="js/clock.js"></script>
     <link rel="icon" href="images/head/logo.png" type="image/xl-icon">
-    <!-- 我的目标是成为一名前端工程师 在里面加入兴趣..-->
 </head>
 
 <body>
@@ -70,5 +71,6 @@
         </ul>
     </div>
 </body>
+<!-- 等待body内容加载完毕，onload在这里才执行 -->
 
 </html>

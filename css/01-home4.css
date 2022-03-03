@@ -154,7 +154,7 @@ html {
     perspective: 10rem;
     transform-style: preserve-3d;
     overflow-y: auto;
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .list-item {

@@ -1,3 +1,27 @@
+/*======滚动条========
+=====================*/
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 4px;
+    background: linear-gradient( rgba(250, 250, 250, 0), #e75e5e);
+    border-radius: 6px;
+}
+
+::-webkit-resizer {
+    width: 4px;
+    background: linear-gradient(#e75e5e, rgba(250, 250, 250, 0));
+}
+
+
+/*======时钟========
+=====================*/
+
 .clock {
     display: flex;
     width: 40%;
@@ -130,3 +154,7 @@
         transform: rotateX(0);
     }
 }
+
+
+/*======导航========
+=====================*/
